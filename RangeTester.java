@@ -18,5 +18,11 @@ public class RangeTester {
          System.out.print(", ") ;
    }
     System.out.println( );
+    int[] a = {1,2,3,4,5,6} ;
+    ArraySequence b = new ArraySequence(a) ;
+    while (b.hasNext()) {
+      System.out.println(b.next()) ;
+    }
   }
+
 }
