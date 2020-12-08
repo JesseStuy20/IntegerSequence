@@ -29,6 +29,11 @@ public class RangeTester {
     catch (RuntimeException e) {
       System.out.println("No more values") ;
     }
+    s.reset() ;
+    ArraySequence c = new ArraySequence(s) ;
+    while (c.hasNext()) {
+      System.out.println(c.next()) ;
+    }
   }
 
 }
