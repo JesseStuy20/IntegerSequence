@@ -18,10 +18,16 @@ public class RangeTester {
          System.out.print(", ") ;
    }
     System.out.println( );
-    int[] a = {1,2,3,4,5,6} ;
+    int[] a = {1,3,4,1,0,81} ;
     ArraySequence b = new ArraySequence(a) ;
     while (b.hasNext()) {
       System.out.println(b.next()) ;
+    }
+    try {
+      b.next() ;
+    }
+    catch (RuntimeException e) {
+      System.out.println("No more values") ;
     }
   }
 

@@ -22,7 +22,7 @@ public class Range implements IntegerSequence{
 
   public int next() {
     if (current > end) {
-      throw new NoSuchElementException ("No more values left.") ;
+      throw new NoSuchElementException ("No more values left in range.") ;
     }
     int result = current ;
     current++ ;

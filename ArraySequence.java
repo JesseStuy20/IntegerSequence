@@ -17,12 +17,12 @@ public class ArraySequence implements IntegerSequence {
   }
 
   public boolean hasNext() {
-    return (currentIndex <= length()) ;
+    return (currentIndex < length()) ;
   }
 
   public int next() {
     if (!hasNext()) {
-      throw new NoSuchElementException ("No more values left.") ;
+      throw new NoSuchElementException ("No more values left in ArraySequence.") ;
     }
     int result = data[currentIndex] ;
     currentIndex++ ;
