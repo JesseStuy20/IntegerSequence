@@ -34,6 +34,13 @@ public class RangeTester {
     while (c.hasNext()) {
       System.out.println(c.next()) ;
     }
+    IntegerSequence d = new Range(10,20);
+    IntegerSequence as = new ArraySequence(d) ;
+    System.out.println("ArraySequence(seq):") ;
+    while(as.hasNext()) {
+      System.out.print(as.next() + ", ") ;
+    }
+    System.out.println() ;
   }
 
 }
