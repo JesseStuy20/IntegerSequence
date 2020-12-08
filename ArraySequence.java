@@ -9,11 +9,24 @@ public class ArraySequence implements IntegerSequence {
   }
 
   public void reset() {
-    currentindex = 0 ;
+    currentIndex = 0 ;
   }
 
   public int length() {
     return data.length ;
+  }
+
+  public boolean hasNext() {
+    return (currentIndex <= length()) ;
+  }
+
+  public int next() {
+    if (!hasNext()) {
+      throw new NoSuchElementException ("No more values left.") ;
+    }
+    int result = data[currentIndex] ;
+    currentIndex++ ;
+    return result ;
   }
 
 }
