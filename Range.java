@@ -3,9 +3,9 @@ public class Range implements IntegerSequence{
   private int start, end, current ;
 
   public Range(int start, int end) {
-    start = this.start ;
-    end = this.end ;
-    current = this.start ;
+    this.start = start ;
+    this.end = end ;
+    current = start ;
   }
 
   public void reset() {
@@ -17,11 +17,11 @@ public class Range implements IntegerSequence{
   }
 
   public boolean hasNext() {
-    return (current < end) ;
+    return (current <= end) ;
   }
 
   public int next() {
-    if (current >= end) {
+    if (current > end) {
       throw new NoSuchElementException ("No more values left.") ;
     }
     int result = current ;
